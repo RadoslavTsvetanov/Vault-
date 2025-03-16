@@ -14,12 +14,34 @@ With this the only env a service needs is a client key and the url for the manag
 
 # Usage 
 
-## Admin default key
-adminadmin
+## default credentials for login 
+
+{
+"username": "admin",
+"password": "password"
+}
+
+Note you should set the x-skip-auth header to true 
+
+
+full reqeust 
+
+```zsh
+curl http://localhost:3000/auth/login \
+  --request POST \
+  --header 'X-Skip-Auth: true' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "username": "admin",
+  "password": "password"
+}'
+
+```
+
 
 ## Env 
 Look at the env for more details
 
 ## Endpoints 
 
-just look at the code its not that deep # Vault-
+you cann download the openapi def from {url}/swagger
